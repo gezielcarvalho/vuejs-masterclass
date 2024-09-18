@@ -6,5 +6,7 @@
   "importOrder": ["^@core/(.*)$", "^@app/(.*)$", "^@shared/(.*)$", "^[./]"],
   "printWidth": 100,
   "trailingComma": "none",
-  "vueIndentScriptAndStyle": true
+  "vueIndentScriptAndStyle": true,
+  "bracketSameLine": true,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

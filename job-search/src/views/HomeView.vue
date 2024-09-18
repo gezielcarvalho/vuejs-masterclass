@@ -2,6 +2,6 @@
 
 <template>
   <main>
-    <p>Home View</p>
+    <h1 class="mt-8 text-center text-6xl">Home View</h1>
   </main>
 </template>
