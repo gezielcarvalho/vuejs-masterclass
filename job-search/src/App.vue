@@ -6,7 +6,7 @@
 <template>
   <header>
     <div class="wrapper">
-      <MainNav title="Main Navigation" />
+      <MainNav />
     </div>
   </header>
   <RouterView />
