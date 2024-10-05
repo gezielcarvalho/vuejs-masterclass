@@ -20,8 +20,13 @@ describe("Basic math", () => {
   it("should exponentiate numbers", () => {
     expect(2 ** 3).toBe(8);
   });
-  it("should be even", () => {
-    expect(evenOrOdd(2)).toBe("even");
+  describe("Number parity", () => {
+    it("should be even", () => {
+      expect(evenOrOdd(2)).toBe("even");
+    });
+    it("should be odd", () => {
+      expect(evenOrOdd(3)).toBe("odd");
+    });
   });
 });
 
