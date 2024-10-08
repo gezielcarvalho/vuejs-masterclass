@@ -35,3 +35,27 @@ Aspects:
 # References
 
 https://www.udemy.com/user/borispaskhaver/
+
+# Fixes for Next Lesson
+
+In the next lesson, we'll setup an NPM package called Vue Testing Library. We'll also install the supplementary @testing-library/jest-dom package to gain access to additional matchers/assertions.
+
+The @testing-library/jest-dom team released a new version in August 2023 that is incompatible with what you see in the video.
+
+Instead of the expect.extend syntax you'll see, you'll need to write the following line:
+
+```
+    import "@testing-library/jest-dom/vitest";
+```
+
+Your setup.js file should look like this at the end of the lesson. I will update the corresponding zip file at the end of each section if you want to download the project with up-to-date dependencies and files.
+
+```
+    import "@testing-library/jest-dom/vitest";
+    import { cleanup } from "@testing-library/vue";
+    import { afterEach } from "vitest";
+
+    afterEach(() => {
+      cleanup();
+    });
+```
