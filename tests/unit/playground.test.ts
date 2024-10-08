@@ -1,5 +1,4 @@
-import { describe, it, expect } from "vitest";
-import { evenOrOdd } from "@/playground";
+import { evenOrOdd, multiply, divide } from "@/playground";
 
 describe("Basic math", () => {
   it("should add numbers", () => {
@@ -28,8 +27,23 @@ describe("Basic math", () => {
       expect(evenOrOdd(3)).toBe("odd");
     });
   });
-});
 
-it("should add numbers", () => {
-  expect(1 + 2).toBe(3);
+  describe("Multiplication", () => {
+    it("should multiply numbers", () => {
+      expect(multiply(2, 3)).toBe(6);
+      expect(multiply(2, 0)).toBe(0);
+      expect(multiply(0, 2)).toBe(0);
+    });
+  });
+
+  describe("Division", () => {
+    it("should divide numbers", () => {
+      expect(divide(4, 2)).toBe(2);
+    });
+    it("should throw an error when dividing by zero", () => {
+      expect(() => {
+        divide(4, 0);
+      }).toThrowError("Division by zero");
+    });
+  });
 });

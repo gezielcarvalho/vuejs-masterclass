@@ -22,6 +22,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
+    "types": ["vitest/globals"],
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
