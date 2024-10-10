@@ -6,6 +6,16 @@
   const author = ref({ firstName: "Geziel", lastName: "Carvalho" });
   const demoUrl = "https://google.com";
 
+  const menuItems = [
+    { name: "About", path: "/about" },
+    { name: "Teams", path: "/teams" },
+    { name: "Location", path: "/location" },
+    { name: "Life at Sabre", path: "/life-at-sabre" },
+    { name: "How we hire", path: "/how-we-hire" },
+    { name: "Students", path: "/students" },
+    { name: "Jobs", path: "/jobs" }
+  ];
+
   onMounted(() => {
     console.log("Component is mounted");
   });
@@ -23,14 +33,18 @@
     <div
       class="mx-auto flex h-full flex-nowrap justify-between border-b border-solid border-brand-gray-1 px-8">
       <div class="flex h-full items-center space-x-2 pl-8 text-lg">
-        <RouterLink to="/">{{ companyName }} - Demo</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink class="font-bold" to="/">{{ companyName }} - Demo</RouterLink>
+        <ul class="flex h-full list-none items-center space-x-4">
+          <li v-for="item in menuItems" :key="item.name">
+            <RouterLink :to="item.path">{{ item.name }}</RouterLink>
+          </li>
+        </ul>
       </div>
-      <h2 class="ml-8 flex h-full items-center text-sm">
-        <span>{{ companyName }}</span> - Developed by {{ author.firstName }} {{ author.lastName }}
-      </h2>
+      <h2 class="ml-8 flex h-full items-center text-sm"></h2>
     </div>
   </nav>
-  <p class="p-16">1</p>
-  <a :href="demoUrl">Google: {{ demoUrl }}</a>
+  <p class="p-16">
+    <span>{{ companyName }}</span> - Developed by {{ author.firstName }} {{ author.lastName }}
+    <a :href="demoUrl">Google: {{ demoUrl }}</a>
+  </p>
 </template>
