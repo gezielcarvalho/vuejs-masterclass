@@ -28,3 +28,6 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# Test snapshot files
+tests/**/__snapshots__/*
