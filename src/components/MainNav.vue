@@ -4,6 +4,7 @@
 
   const companyName = ref("Sabre Careers");
   const author = ref({ firstName: "Geziel", lastName: "Carvalho" });
+  const demoUrl = "https://google.com";
 
   onMounted(() => {
     console.log("Component is mounted");
@@ -30,4 +31,6 @@
       </h2>
     </div>
   </nav>
+  <p class="p-16">1</p>
+  <a :href="demoUrl">Google: {{ demoUrl }}</a>
 </template>
