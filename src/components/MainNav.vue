@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { onMounted, onUnmounted, onUpdated, ref } from "vue";
-  // import { RouterLink } from "vue-router";
+  import { RouterLink } from "vue-router";
 
   const companyName = ref("Sabre Careers");
   const author = ref({ firstName: "Geziel", lastName: "Carvalho" });
@@ -22,8 +22,8 @@
     <div
       class="mx-auto flex h-full flex-nowrap justify-between border-b border-solid border-brand-gray-1 px-8">
       <div class="flex h-full items-center space-x-2 pl-8 text-lg">
-        <!-- <RouterLink to="/">{{ companyName }} - Demo</RouterLink>
-        <RouterLink to="/about">About</RouterLink> -->
+        <RouterLink to="/">{{ companyName }} - Demo</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
       </div>
       <h2 class="ml-8 flex h-full items-center text-sm">
         <span>{{ companyName }}</span> - Developed by {{ author.firstName }} {{ author.lastName }}
