@@ -27,6 +27,12 @@ export default {
           800: "#1E2026",
           900: "#0D0E11"
         }
+      },
+      boxShadow: {
+        blue: "0 0 3px 3px #4285f4",
+        "brand-md": "0px 8px 16px rgba(0, 0, 0, 0.08)",
+        "brand-lg": "0px 16px 24px rgba(0, 0, 0, 0.1)",
+        "brand-xl": "0px 24px 32px rgba(0, 0, 0, 0.1)"
       }
     }
   },
