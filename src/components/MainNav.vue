@@ -7,13 +7,13 @@
   const demoUrl = "https://google.com";
 
   const menuItems = [
-    { name: "About", path: "/about" },
     { name: "Teams", path: "/teams" },
     { name: "Location", path: "/location" },
     { name: "Life at Sabre", path: "/life-at-sabre" },
     { name: "How we hire", path: "/how-we-hire" },
     { name: "Students", path: "/students" },
-    { name: "Jobs", path: "/jobs" }
+    { name: "Jobs", path: "/jobs" },
+    { name: "About", path: "/about" }
   ];
 
   onMounted(() => {
@@ -35,7 +35,7 @@
       <div class="flex h-full items-center space-x-2 pl-8 text-lg">
         <RouterLink class="font-bold" to="/">{{ companyName }} - Demo</RouterLink>
         <ul class="flex h-full list-none items-center space-x-4">
-          <li v-for="item in menuItems" :key="item.name">
+          <li v-for="item in menuItems" :key="item.name" class="ml-9 first:ml-2">
             <RouterLink :to="item.path">{{ item.name }}</RouterLink>
           </li>
         </ul>
@@ -44,7 +44,8 @@
     </div>
   </nav>
   <p class="p-16">
-    <span>{{ companyName }}</span> - Developed by {{ author.firstName }} {{ author.lastName }}
-    <a :href="demoUrl">Google: {{ demoUrl }}</a>
+    <span>{{ companyName }}</span> -
+    <span>Developed by {{ author.firstName }} {{ author.lastName }}</span>
+    <a class="ml-2" :href="demoUrl">Google: {{ demoUrl }}</a>
   </p>
 </template>
