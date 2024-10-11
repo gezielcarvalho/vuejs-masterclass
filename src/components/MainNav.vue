@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { onMounted, onUnmounted, onUpdated, ref } from "vue";
   import { RouterLink } from "vue-router";
+  import ActionButton from "@/components/ActionButton.vue";
 
   const companyName = ref("Sabre Careers");
   const author = ref({ firstName: "Geziel", lastName: "Carvalho" });
@@ -31,7 +32,7 @@
 <template>
   <nav class="fixed left-0 top-0 h-16 w-full bg-white">
     <div
-      class="mx-auto flex h-full flex-nowrap justify-between border-b border-solid border-brand-gray-1 px-8">
+      class="mx-auto flex h-full flex-nowrap justify-between border-b border-solid border-brand-gray-1 px-8 py-2">
       <div class="flex h-full items-center space-x-2 pl-8 text-lg">
         <RouterLink class="font-bold" to="/">{{ companyName }} - Demo</RouterLink>
         <ul class="flex h-full list-none items-center space-x-4">
@@ -40,7 +41,7 @@
           </li>
         </ul>
       </div>
-      <h2 class="ml-8 flex h-full items-center text-sm"></h2>
+      <ActionButton />
     </div>
   </nav>
   <p class="p-16">
