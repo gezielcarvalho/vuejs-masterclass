@@ -7,6 +7,11 @@
   const companyName = ref("Sabre Careers");
   const author = ref({ firstName: "Geziel", lastName: "Carvalho" });
   const demoUrl = "https://google.com";
+  const isLoggedIn = ref(false);
+
+  const toggleLogin = () => {
+    isLoggedIn.value = !isLoggedIn.value;
+  };
 
   const menuItems = [
     { name: "Teams", path: "/teams" },
@@ -42,8 +47,8 @@
           </li>
         </ul>
       </div>
-      <ActionButton />
-      <ProfileImage />
+      <ProfileImage v-if="isLoggedIn" @click="toggleLogin" />
+      <ActionButton v-else @click="toggleLogin" />
     </div>
   </nav>
   <p class="p-16">
