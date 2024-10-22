@@ -1,3 +1,7 @@
+<!-- /src/components/MainNav.vue
+This demonstrates the modular pattern by:
+Breaking the application into smaller components (MainNav, views like TeamsView). 
+-->
 <script setup lang="ts">
   // Component-Based Architecture (Modular Pattern)
   import { onMounted, onUnmounted, onUpdated, ref } from "vue";
