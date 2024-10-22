@@ -1,10 +1,8 @@
 <!-- src/views/JobsView.vue 
-This approach implements the Observer Pattern by using Pinia 
-to manage and reactively update the state of the jobs list. 
-The JobsView component observes changes in the Pinia store and 
-updates the UI accordingly. 
+This approach implements the Observer Pattern by using Pinia to manage and 
+reactively update the state of the jobs list. The JobsView component observes
+changes in the Pinia store and updates the UI accordingly. 
 -->
-
 <script setup lang="ts">
   import { onMounted } from "vue";
   import { useJobsStore } from "@/stores/jobs";

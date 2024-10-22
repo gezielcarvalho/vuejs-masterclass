@@ -1,6 +1,6 @@
 <!-- /src/components/MainNav.vue
-This demonstrates the modular pattern by:
-Breaking the application into smaller components (MainNav, views like TeamsView). 
+This demonstrates the modular pattern by breaking the application into smaller
+components (MainNav, views like TeamsView). 
 -->
 <script setup lang="ts">
   // Component-Based Architecture (Modular Pattern)
