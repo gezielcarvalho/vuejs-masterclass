@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  // Component-Based Architecture (Modular Pattern)
   import { onMounted, onUnmounted, onUpdated, ref } from "vue";
   import { RouterLink } from "vue-router";
   import ActionButton from "@/components/ActionButton.vue";
