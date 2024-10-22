@@ -21,8 +21,7 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
-    "types": ["vitest/globals"],
+    "types": ["vitest/globals", "vue"], // Add "vue" for Vue types
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
