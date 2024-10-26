@@ -53,7 +53,7 @@ components (MainNav, views like TeamsView).
         </ul>
       </div>
       <ProfileImage v-if="isLoggedIn" @click="toggleLogin" />
-      <ActionButton v-else @click="toggleLogin" />
+      <ActionButton v-else :title="'Sign In'" @click="toggleLogin" />
     </div>
   </nav>
   <p class="p-16">
