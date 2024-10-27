@@ -1,11 +1,15 @@
 <script setup lang="ts">
   // declare a prop named `title` of type string, that will be received from the parent component
-  import { defineProps } from "vue";
+  import { defineProps, ref } from "vue";
 
   interface IActionButtonProps {
     title: string;
   }
 
+  // DATA
+  const isPrimary = ref(true);
+
+  // PROPS
   const props: IActionButtonProps = defineProps({
     title: {
       type: String,
@@ -14,7 +18,11 @@
   });
 </script>
 <template>
-  <button class="primary">
+  <button
+    :class="{
+      primary: isPrimary,
+      secondary: !isPrimary
+    }">
     {{ props.title }}
   </button>
 </template>
