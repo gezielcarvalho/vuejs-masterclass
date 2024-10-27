@@ -1,6 +1,6 @@
 <script setup lang="ts">
   // declare a prop named `title` of type string, that will be received from the parent component
-  import { defineProps, ref } from "vue";
+  import { defineProps, onMounted, ref } from "vue";
 
   interface IActionButtonProps {
     title: string;
@@ -36,6 +36,11 @@
       secondary: !isPrimary.value
     };
   };
+
+  // LIFECYCLE HOOKS
+  onMounted(() => {
+    console.log("ActionButton is mounted");
+  });
 </script>
 <template>
   <button :class="buttonClasses()" @click="handleClick">
