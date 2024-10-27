@@ -23,29 +23,26 @@
   });
 
   // METHODS
-  const toggleButton = (e: any) => {
-    e.stopPropagation();
-    isPrimary.value = !isPrimary.value;
-  };
-
-  const handleClick = (e: any) => {
-    e.stopPropagation();
+  const handleClick = () => {
     if (props.buttonClick) {
       props.buttonClick();
     }
   };
+
+  // COMPUTED
+  const buttonClasses = () => {
+    return {
+      primary: isPrimary.value,
+      secondary: !isPrimary.value
+    };
+  };
 </script>
 <template>
-  <button
-    :class="{
-      primary: isPrimary,
-      secondary: !isPrimary
-    }"
-    @click="handleClick">
+  <button :class="buttonClasses()" @click="handleClick">
     {{ props.title }}
   </button>
   <!-- create a checkbox -->
-  <input v-model="isPrimary" type="checkbox" @click="toggleButton" />
+  <input v-model="isPrimary" type="checkbox" />
 </template>
 
 <style scoped>
