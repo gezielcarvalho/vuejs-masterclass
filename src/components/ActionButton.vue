@@ -4,6 +4,7 @@
 
   interface IActionButtonProps {
     title: string;
+    buttonClick?: Function;
   }
 
   // DATA
@@ -14,17 +15,37 @@
     title: {
       type: String,
       required: true
+    },
+    buttonClick: {
+      type: Function,
+      default: () => {}
     }
   });
+
+  // METHODS
+  const toggleButton = (e: any) => {
+    e.stopPropagation();
+    isPrimary.value = !isPrimary.value;
+  };
+
+  const handleClick = (e: any) => {
+    e.stopPropagation();
+    if (props.buttonClick) {
+      props.buttonClick();
+    }
+  };
 </script>
 <template>
   <button
     :class="{
       primary: isPrimary,
       secondary: !isPrimary
-    }">
+    }"
+    @click="handleClick">
     {{ props.title }}
   </button>
+  <!-- create a checkbox -->
+  <input v-model="isPrimary" type="checkbox" @click="toggleButton" />
 </template>
 
 <style scoped>
