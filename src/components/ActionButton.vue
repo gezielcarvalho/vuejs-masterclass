@@ -60,7 +60,6 @@
   }
 
   .secondary {
-    background-color: #f3f4f6;
-    color: #1e40af;
+    @apply hover:bg-brand-blue-2 border-brand-blue-2 border-2 bg-transparent text-brand-blue-1 hover:text-white;
   }
 </style>
