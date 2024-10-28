@@ -1,6 +1,6 @@
 <script setup lang="ts">
   // declare a prop named `title` of type string, that will be received from the parent component
-  import { defineProps, onMounted, ref } from "vue";
+  import { defineProps, onMounted, computed, reactive } from "vue";
 
   interface IActionButtonProps {
     title: string;
@@ -8,7 +8,9 @@
   }
 
   // DATA
-  const isPrimary = ref(true);
+  const data = reactive({
+    isPrimary: true
+  });
 
   // PROPS
   const props: IActionButtonProps = defineProps({
@@ -23,19 +25,25 @@
   });
 
   // METHODS
-  const handleClick = () => {
-    if (props.buttonClick) {
-      props.buttonClick();
+  const methods = {
+    handleClick: () => {
+      if (props.buttonClick) {
+        props.buttonClick();
+      }
     }
   };
 
   // COMPUTED
-  const buttonClasses = () => {
+  const comp = computed(() => {
     return {
-      primary: isPrimary.value,
-      secondary: !isPrimary.value
+      buttonClasses: () => {
+        return {
+          primary: data.isPrimary,
+          secondary: !data.isPrimary
+        };
+      }
     };
-  };
+  });
 
   // LIFECYCLE HOOKS
   onMounted(() => {
@@ -43,11 +51,11 @@
   });
 </script>
 <template>
-  <button :class="buttonClasses()" @click="handleClick">
+  <button :class="comp.buttonClasses()" @click="methods.handleClick">
     {{ props.title }}
   </button>
   <!-- create a checkbox -->
-  <input v-model="isPrimary" type="checkbox" />
+  <input v-model="data.isPrimary" type="checkbox" />
 </template>
 
 <style scoped>
