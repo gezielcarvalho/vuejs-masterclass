@@ -6,7 +6,8 @@ coupling.
 -->
 <script setup lang="ts">
   import { inject, onMounted, ref } from "vue";
-  import { TeamsService, Team } from "@/services/teamsService";
+  import { TeamsService } from "@/services/teamsService";
+  import type { Team } from "@/services/teamsService";
 
   // Inject the teamsService
   const teamsService = inject<TeamsService>("teamsService");

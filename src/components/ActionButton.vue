@@ -1,6 +1,6 @@
 <script setup lang="ts">
   // declare a prop named `title` of type string, that will be received from the parent component
-  import { defineProps, onMounted, computed, reactive } from "vue";
+  import { onMounted, computed, reactive } from "vue";
 
   interface IActionButtonProps {
     title: string;
@@ -68,6 +68,6 @@
   }
 
   .secondary {
-    @apply hover:bg-brand-blue-2 border-brand-blue-2 border-2 bg-transparent text-brand-blue-1 hover:text-white;
+    @apply border-2 border-brand-blue-2 bg-transparent text-brand-blue-1 hover:bg-brand-blue-2 hover:text-white;
   }
 </style>
