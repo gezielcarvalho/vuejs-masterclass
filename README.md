@@ -1,37 +1,45 @@
-# VueJS. A complete real-world project using Vue, Pinia, TypeScript, TailwindCSS, Vitest, and more.
+# job-search
 
-## Goals
+This template should help get you started developing with Vue 3 in Vite.
 
-1. Build a complete, real-world Vue application using Vue, Pinia, Vue Router, and more
-2. Master modern front end technologies like TailwindCSS, TypeScript, and Prettier
-3. Use Vitest and Vue Testing Libary to write unit tests for all elements of the Vue ecosystem
-4. Learn best practices for Vue component design
-5. Covers both Vue 2's Options API and Vue 3's Composition API
+## Recommended IDE Setup
 
-## Description
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-Content:
+## Type Support for `.vue` Imports in TS
 
-- Creating Vue components
-- Styling Vue components
-- Using Vue directives to compose dynamic interfaces
-- Passing props between components
-- Emitting events
-- Routing our user from page to page
-- Testing Vue components
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
-Aspects:
+## Customize configuration
 
-- Vue (including both the Options API from Vue 2 and the new Composition API in Vue 3)
-- Pinia for global state management
-- Vue Router for navigating the user across pages in our application
-- Testing with Vue Testing Library and Vitest
-- Scaffolding Vue applications with Create Vue
-- Styling components with Tailwind CSS
-- Adding type checking with TypeScript
-- Linting our code with ESLint
-- Formatting our code with Prettier
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-# References
+## Project Setup
 
-https://www.udemy.com/user/borispaskhaver/
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+### Run Unit Tests with [Vitest](https://vitest.dev/)
+
+```sh
+npm run test:unit
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
+```
