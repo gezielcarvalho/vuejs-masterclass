@@ -1,5 +1,14 @@
 # Vue.js Masterclass - Job Search Application
 
+> **Repository status:** Vue 3 learning project and frontend architecture reference. It is not an actively supported job platform, recruiting site, or production Sabre Software service.
+
+## Current-state documentation
+
+- [Overview and scope](docs/README.md)
+- [Learning charter](docs/project-charter.md)
+- [Architecture and data boundaries](docs/architecture.md)
+- [Delivery and quality handoff](docs/delivery-and-quality.md)
+
 A comprehensive, production-ready Vue 3 application demonstrating modern front-end development practices, built as part of a complete Vue.js masterclass. This project implements a job search platform with a focus on enterprise-level architecture and best practices.
 
 ## 🚀 Project Overview
